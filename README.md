@@ -18,11 +18,14 @@ node pipeline\run.mjs
 
 ## 手动发布
 
-```
-$env:CLOUDFLARE_API_TOKEN = "<token>"; npx --yes wrangler@4.156.2 pages deploy public --project-name signaltube --branch main --commit-dirty=true
+需要一个有 **Cloudflare Pages 编辑权限** 的 API token（dash.cloudflare.com → My Profile → API Tokens 创建），通过环境变量传入，不要写进任何文件或仓库：
+
+```powershell
+$env:CLOUDFLARE_API_TOKEN = "<你的token>"
+npx --yes wrangler@4.156.2 pages deploy public --project-name signaltube --branch main --commit-dirty=true
 ```
 
-token 按用户规矩不落盘，只在当次会话用。Cloudflare 账号：a4e3da8c28c2b2e09de869c8f42a0dfe。
+首次部署需要先创建项目：`npx --yes wrangler@4.156.2 pages project create signaltube --production-branch main`。
 
 ## 数据口径
 
