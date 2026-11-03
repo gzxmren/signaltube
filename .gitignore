@@ -1,0 +1,16 @@
+# 密钥绝不进仓库
+.env
+
+# 生成的数据与缓存（总量 250MB+，可随时用 pipeline\run.mjs 重新生成）
+data/
+public/
+SignalTube.html
+
+# 本地工具的内部目录
+.workbuddy/
+
+# 日志
+*.log
+
+# 与本项目无关的既有文件
+a16z-AI报告解读-卡兹克版.html
